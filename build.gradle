@@ -49,6 +49,9 @@ dependencies {
 	implementation 'org.ow2.asm:asm-tree:8.0'
 	implementation 'org.ow2.asm:asm-util:8.0'
 
+	//For the GLUtil
+	implementation 'commons-io:commons-io:2.6'
+
 	//to change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 
