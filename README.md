@@ -1,28 +1,14 @@
-# Minecraft Cursed POMF Example Mod
+# CursedRenderThing 
 
-The (unofficial) [Fabric](https://fabricmc.net/) home for 1.2.5 and Beta 1.7.3 - if you want the newer versions see [here](https://github.com/FabricMC/fabric-example-mod).
+A port of an old version of [GLUtils](https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1294081-any-version-of-minecraft-minecraft-glutils-obj) to [minecraft-cursed-legacy's port of fabric to beta 1.7.3](https://github.com/minecraft-cursed-legacy)
+It also contains an example that renders a ro
 
-## Setup
-1. Edit build.gradle and mod.json to suit your needs.
-    * The "mixins" object can be removed from mod.json if you do not need to use mixins.
-    * Please remember to replace all occurrences of "modid" with your own mod ID.
-2. Run the following command:
+## A word about file layout
 
-```
-./gradlew eclipse
-```
+All mtl and image files must be in the same folder as the obj file. You must remove all paths from the file. Eg:
+```map_Kd \MMSEV_Color_v2s.png``` or ```map_Kd ./MMSEV_Color_v2s.png``` becomes: ```map_Kd MMSEV_Color_v2s.png```.
+I have no clue why this is necessary but it is.
 
-NOTE: if you want sources (recommended), instead run
+## PR's
 
-```
-./gradlew rebuildLVT genSources eclipse
-```
-
-Once your mod is complete and ready for use it can be compiled and reobfuscated with:
-
-```
-./gradlew build
-```
-
-## License
-This template is available under the MIT license. Feel free to learn from it and incorporate it in your own projects.
+If you submit pull request that make this more like a proper library they will likely be accepted.
